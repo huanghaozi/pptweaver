@@ -39,6 +39,26 @@ Here's a more detailed look at how the components fit together:
 
 ![PPTWeaver Software Architecture](docs/architecture.svg)
 
+### 🎨 AI Prompt Template
+
+Want to generate `pptweaver`-compatible HTML with your favorite AI? Try this template! The key is to ask the AI to act like a front-end developer and focus on generating clean, self-contained HTML with inline SVGs.
+
+> **Role**: You are an expert front-end developer specializing in SVG and data visualization.
+>
+> **Task**: Generate the visual content for a `[Number of Slides]`-slide PowerPoint presentation.
+>
+> **Format Requirements**:
+> 1.  Provide a **single, complete HTML code block** without extra explanations.
+> 2.  Each slide's content must be enclosed in its own `<body>` tag. The entire file can have multiple `<body>` tags.
+> 3.  All visual elements **must be created using inline SVG**. The SVG's `width` should be `1200` and `height` should be `675` to match the PowerPoint (16:9) aspect ratio.
+> 4.  Elements inside the SVG should use basic shapes (`<rect>`, `<circle>`, `<path>`, `<text>`, etc.) and be styled with inline attributes like `fill`, `stroke`, and `font-size`. Avoid complex CSS classes or external stylesheets.
+> 5.  Arrange the elements within the SVG for a clean, visually appealing layout.
+>
+> **Topic**: `[Describe your slide topic and content here]`
+>
+> **Example Request**:
+> "I need 3 slides about the 'Project Management Triangle.' The first should be a title slide, the second should be the core diagram, and the third should summarize the key takeaways."
+
 ### 🚀 Give It a Go!
 
 **Installation:**
@@ -67,7 +87,6 @@ async def main():
 
 asyncio.run(main())
 ```
-
 ### 🚧 Work in Progress & Future Plans
 
 This is still very much a work in progress! Here's a rough idea of what's on the roadmap:
@@ -81,3 +100,4 @@ This is still very much a work in progress! Here's a rough idea of what's on the
 ### 🤝 Let's Build Together!
 
 This is a personal project, and I'd love for it to be a community one. If you have ideas, find a bug, or want to add a feature, please open an Issue or submit a Pull Request!
+

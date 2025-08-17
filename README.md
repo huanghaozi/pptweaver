@@ -26,7 +26,7 @@
 
 这个项目就是我的答案。我不再将 AI 视为幻灯片设计师，而是将其视为一名前端开发人员。工作流程如下：
 
-[查看 PPTWeaver 工作流图](docs/about_pptweaver_workflow.svg)
+![PPTWeaver 工作流图](docs/about_pptweaver_workflow.svg)
 
 1.  **以 HTML/SVG 为源**: 我们从一个标准的 HTML 文件开始。每一个 `<body>` 标签都代表一张新的幻灯片。
 2.  **使用无头浏览器渲染**: PPTWeaver 在后台使用 Playwright，像浏览器一样精确地渲染 HTML。这一步以完美的保真度捕获所有的 CSS 样式和布局信息。
@@ -37,7 +37,7 @@
 
 这是一个更详细的内部组件协作图：
 
-[查看 PPTWeaver 软件架构图](docs/architecture.svg)
+![PPTWeaver 软件架构图](docs/architecture.svg)
 
 ### 🚀 来试试看！
 

@@ -50,6 +50,13 @@ playwright install
 ```
 
 **快速使用:**
+
+***命令行使用:***
+```bash
+pptweaver your_slides.html -o presentation.pptx
+```
+
+***代码中使用:***
 ```python
 import asyncio
 from pptweaver import Converter

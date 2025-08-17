@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multi-Page Test</title>
+    <style>
+        body {
+            display: none; /* Hide body by default */
+            width: 1200px;
+            height: 675px;
+            margin: 0;
+            padding: 0;
+        }
+        body.active {
+            display: block; /* Show active slide */
+        }
+    </style>
+</head>
+<body class="active">
+    <!-- Slide 1 -->
+    <svg width="1200" height="675" viewBox="0 0 1200 675">
+        <rect x="0" y="0" width="1200" height="675" fill="#f0f0f0"></rect>
+        <text x="600" y="337" font-size="72" text-anchor="middle" font-family="Arial">Page 1</text>
+    </svg>
+</body>
+<body>
+    <!-- Slide 2 -->
+    <svg width="1200" height="675" viewBox="0 0 1200 675">
+        <rect x="0" y="0" width="1200" height="675" fill="#e0e0ff"></rect>
+        <text x="600" y="337" font-size="72" text-anchor="middle" font-family="Arial">Page 2</text>
+        <circle cx="200" cy="200" r="80" fill="#ff8080"></circle>
+    </svg>
+</body>
+<body>
+    <!-- Slide 3 -->
+    <svg width="1200" height="675" viewBox="0 0 1200 675">
+        <rect x="0" y="0" width="1200" height="675" fill="#e0ffe0"></rect>
+        <text x="600" y="337" font-size="72" text-anchor="middle" font-family="Arial">Page 3</text>
+    </svg>
+</body>
+</html>

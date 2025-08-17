@@ -1,0 +1,68 @@
+<svg width="1000" height="600" viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="#555" />
+        </marker>
+        <style>
+            .title { font-family: sans-serif; font-size: 24px; font-weight: bold; text-anchor: middle; }
+            .box { fill: #f8f9fa; stroke: #dee2e6; stroke-width: 2; }
+            .box-title { font-family: sans-serif; font-size: 16px; font-weight: bold; text-anchor: middle; }
+            .box-text { font-family: sans-serif; font-size: 14px; text-anchor: middle; }
+            .arrow-text { font-family: sans-serif; font-size: 12px; text-anchor: middle; fill: #6c757d; }
+        </style>
+    </defs>
+
+    <text x="500" y="40" class="title">PPTWeaver - 软件架构 (Software Architecture)</text>
+
+    <!-- Input -->
+    <rect x="50" y="250" width="150" height="100" class="box" rx="5"/>
+    <text x="125" y="280" class="box-title">输入 HTML</text>
+    <text x="125" y="300" class="box-title">(Input HTML)</text>
+    <text x="125" y="325" class="box-text">(Multi-`&lt;body&gt;`)</text>
+
+    <!-- Converter Core -->
+    <rect x="250" y="100" width="500" height="400" fill="#e9ecef" stroke="#ced4da" rx="10"/>
+    <text x="500" y="130" class="box-title" font-size="20">转换器核心 (Converter Core)</text>
+
+    <!-- BeautifulSoup Parser -->
+    <rect x="275" y="150" width="200" height="90" class="box" rx="5"/>
+    <text x="375" y="180" class="box-title">1. HTML 解析器</text>
+    <text x="375" y="200" class="box-title">(HTML Parser)</text>
+    <text x="375" y="225" class="box-text">(BeautifulSoup)</text>
+
+    <!-- Playwright Renderer -->
+    <rect x="275" y="260" width="200" height="110" class="box" rx="5"/>
+    <text x="375" y="290" class="box-title">2. 无头浏览器</text>
+    <text x="375" y="310" class="box-title">(Headless Browser)</text>
+    <text x="375" y="340" class="box-text">(Playwright)</text>
+
+    <!-- Element Processors -->
+    <rect x="525" y="150" width="200" height="280" class="box" rx="5"/>
+    <text x="625" y="175" class="box-title">3. 元素处理器</text>
+    <text x="625" y="195" class="box-title">(Element Processors)</text>
+    <path d="M 540 215 H 710" stroke="#dee2e6"/>
+    <text x="625" y="240" class="box-text">RectProcessor</text>
+    <text x="625" y="265" class="box-text">TextProcessor</text>
+    <text x="625" y="290" class="box-text">PathProcessor</text>
+    <text x="625" y="315" class="box-text">ImageProcessor</text>
+    <text x="625" y="340" class="box-text">...</text>
+
+    <!-- Arrows -->
+    <path d="M 200 300 H 275" marker-end="url(#arrow)"/>
+    <text x="237" y="295" class="arrow-text">读取 (Read)</text>
+
+    <path d="M 375 240 V 260" marker-end="url(#arrow)"/>
+    <text x="425" y="255" class="arrow-text">注入 (Inject)</text>
+
+    <path d="M 475 315 H 525" marker-end="url(#arrow)"/>
+    <text x="500" y="310" class="arrow-text">提取 (Extract)</text>
+
+    <!-- Output -->
+    <rect x="800" y="250" width="150" height="100" class="box" rx="5"/>
+    <text x="875" y="280" class="box-title">输出 .pptx</text>
+    <text x="875" y="300" class="box-title">(Output .pptx)</text>
+    <text x="875" y="325" class="box-text">(Editable)</text>
+    <path d="M 750 300 H 800" marker-end="url(#arrow)"/>
+    <text x="775" y="295" class="arrow-text">生成 (Generate)</text>
+
+</svg>

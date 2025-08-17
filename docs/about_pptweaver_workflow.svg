@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About PPTWeaver</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+        body {
+            display: none;
+            width: 1200px;
+            height: 675px;
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+        }
+        body.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<!-- Slide 1: Title -->
+<body class="active">
+    <svg width="1200" height="675" viewBox="0 0 1200 675">
+        <rect width="1200" height="675" fill="#4353ff"/>
+        <text x="600" y="300" font-size="96" font-weight="bold" fill="white" text-anchor="middle">幻织 · PPTWeaver</text>
+        <text x="600" y="400" font-size="36" fill="white" text-anchor="middle" opacity="0.9">一个将 Web 内容编织为可编辑PPT的探索</text>
+    </svg>
+</body>
+
+<!-- Slide 2: The Problem -->
+<body>
+    <svg width="1200" height="675" viewBox="0 0 1200 675">
+        <text x="100" y="100" font-size="48" font-weight="bold" fill="#333">当前 AI 生成 PPT 的困境</text>
+        
+        <g transform="translate(150, 200)">
+            <rect width="400" height="300" fill="#fff" stroke="#ddd" rx="10"/>
+            <text x="200" y="50" font-size="28" text-anchor="middle" font-weight="bold">方案A: API 调用 (如 MS Graph)</text>
+            <path d="M 50 80 H 350" stroke="#ddd"/>
+            <text x="50" y="120" font-size="22" fill="#e74c3c">· 复杂, 学习成本高</text>
+            <text x="50" y="160" font-size="22" fill="#e74c3c">· 付费, 不适合个人项目</text>
+            <text x="50" y="200" font-size="22" fill="#e74c3c">· 灵活性受限于 API 设计</text>
+        </g>
+        
+        <g transform="translate(650, 200)">
+            <rect width="400" height="300" fill="#fff" stroke="#ddd" rx="10"/>
+            <text x="200" y="50" font-size="28" text-anchor="middle" font-weight="bold">方案B: 生成图片或PDF</text>
+            <path d="M 50 80 H 350" stroke="#ddd"/>
+            <text x="50" y="120" font-size="22" fill="#e74c3c">· 最终产物完全不可编辑</text>
+            <text x="50" y="160" font-size="22" fill="#e74c3c">· 丢失所有矢量和文本信息</text>
+            <text x="50" y="200" font-size="22" fill="#e74c3c">· “PPT生成器”名不副实</text>
+        </g>
+        
+        <text x="600" y="600" font-size="32" text-anchor="middle" fill="#f39c12">有没有一种更原生、更灵活的路径？</text>
+    </svg>
+</body>
+
+<!-- Slide 3: A New Idea -->
+<body>
+    <svg width="1200" height="675" viewBox="0 0 1200 675">
+        <text x="100" y="100" font-size="48" font-weight="bold" fill="#333">一个意外的发现</text>
+        <text x="100" y="160" font-size="28" fill="#555">我发现，AI 大语言模型其实是生成 HTML+SVG 的专家！</text>
+        
+        <rect x="100" y="220" width="1000" height="300" fill="#2d3436" rx="10"/>
+        <text x="120" y="260" font-family="monospace" font-size="20" fill="#dfe6e9">&lt;svg width="1200" height="675"&gt;</text>
+        <text x="140" y="300" font-family="monospace" font-size="20" fill="#55efc4">  &lt;rect x="10" y="10" fill="blue" /&gt;</text>
+        <text x="140" y="340" font-family="monospace" font-size="20" fill="#55efc4">  &lt;text x="20" y="30"&gt;Hello&lt;/text&gt;</text>
+        <text x="120" y="380" font-family="monospace" font-size="20" fill="#dfe6e9">&lt;/svg&gt;</text>
+        
+        <text x="600" y="580" font-size="32" text-anchor="middle" fill="#c0392b">新的问题：如何将这些精美的Web内容，无损地转为<tspan font-weight="bold">可编辑</tspan>的PPT？</text>
+    </svg>
+</body>
+
+<!-- Slide 4: The Solution -->
+<body>
+    <svg width="1200" height="675" viewBox="0 0 1200 675">
+        <text x="600" y="80" font-size="48" font-weight="bold" fill="#333" text-anchor="middle">解决方案：幻织 (PPTWeaver) 的工作流</text>
+
+        <!-- Boxes -->
+        <rect x="100" y="200" width="200" height="100" fill="#81ecec" rx="5"/>
+        <text x="200" y="255" text-anchor="middle" font-size="24">AI Prompt</text>
+        
+        <rect x="350" y="200" width="200" height="100" fill="#74b9ff" rx="5"/>
+        <text x="450" y="255" text-anchor="middle" font-size="24">HTML + SVG</text>
+        
+        <rect x="600" y="150" width="250" height="200" fill="none" stroke="#2d3436" stroke-width="2" stroke-dasharray="8"/>
+        <text x="725" y="180" text-anchor="middle" font-weight="bold" font-size="24">PPTWeaver</text>
+        
+        <rect x="625" y="200" width="200" height="100" fill="#a29bfe"/>
+        <text x="725" y="245" text-anchor="middle" font-size="20">Playwright</text>
+        <text x="725" y="275" text-anchor="middle" font-size="16">(渲染 & 提取)</text>
+
+        <rect x="900" y="200" width="200" height="100" fill="#00b894" rx="5"/>
+        <text x="1000" y="255" text-anchor="middle" font-size="24" fill="white">Editable .pptx</text>
+
+        <!-- Arrows -->
+        <path d="M 300 250 H 350" stroke="#333" stroke-width="3" marker-end="url(#arrow)"/>
+        <path d="M 550 250 H 625" stroke="#333" stroke-width="3" marker-end="url(#arrow)"/>
+        <path d="M 825 250 H 900" stroke="#333" stroke-width="3" marker-end="url(#arrow)"/>
+
+        <defs>
+            <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#333" />
+            </marker>
+        </defs>
+        
+        <text x="600" y="550" font-size="28" text-anchor="middle">核心思路：通过无头浏览器完美渲染HTML，再将渲染后的SVG元素逐一映射为PPT原生形状。</text>
+    </svg>
+</body>
+
+<!-- Slide 5: Feature Comparison -->
+<body>
+    <svg width="1200" height="675" viewBox="0 0 1200 675">
+        <text x="600" y="80" font-size="48" font-weight="bold" fill="#333" text-anchor="middle">方案对比</text>
+        <foreignObject x="100" y="150" width="1000" height="400">
+            <body xmlns="http://www.w3.org/1999/xhtml">
+                <style>
+                    table { width: 100%; border-collapse: collapse; }
+                    th, td { border: 1px solid #ccc; padding: 12px; text-align: center; font-size: 20px; }
+                    th { background-color: #e9ecef; }
+                    .tick { color: green; font-weight: bold; }
+                    .cross { color: red; font-weight: bold; }
+                </style>
+                <table>
+                    <tr>
+                        <th>特性</th>
+                        <th>API 调用 (MS Graph)</th>
+                        <th>图片 / PDF</th>
+                        <th>PPTWeaver (本项目)</th>
+                    </tr>
+                    <tr>
+                        <td>可编辑性</td>
+                        <td class="tick">✔ (原生)</td>
+                        <td class="cross">✘ (完全不可编辑)</td>
+                        <td class="tick">✔ (原生)</td>
+                    </tr>
+                    <tr>
+                        <td>免费 / 开源</td>
+                        <td class="cross">✘ (需付费订阅)</td>
+                        <td class="tick">✔</td>
+                        <td class="tick">✔</td>
+                    </tr>
+                    <tr>
+                        <td>灵活性 / 布局保真度</td>
+                        <td>中 (受API限制)</td>
+                        <td class="tick">高 (像素级保真)</td>
+                        <td class="tick">高 (矢量级保真)</td>
+                    </tr>
+                     <tr>
+                        <td>AI 生成友好度</td>
+                        <td>低 (需结构化JSON)</td>
+                        <td>高 (AI擅长生成图片)</td>
+                        <td class="tick">高 (AI擅长生成HTML)</td>
+                    </tr>
+                </table>
+            </body>
+        </foreignObject>
+    </svg>
+</body>
+
+<!-- Slide 6: The End -->
+<body>
+    <svg width="1200" height="675" viewBox="0 0 1200 675">
+        <rect width="1200" height="675" fill="#2d3436"/>
+        <text x="600" y="300" font-size="80" font-weight="bold" fill="white" text-anchor="middle">Thanks!</text>
+        <text x="600" y="400" font-size="32" fill="#dfe6e9" text-anchor="middle">欢迎 Star, Fork, and Contribute!</text>
+    </svg>
+</body>
+</html>

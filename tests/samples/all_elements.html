@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Elements Test</title>
+    <style>
+        body {
+            width: 1200px;
+            height: 675px;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
+        li {
+            font-size: 24px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <svg width="1200" height="675" viewBox="0 0 1200 675">
+        <!-- Rect -->
+        <rect x="50" y="50" width="200" height="100" fill="rgba(255, 0, 0, 0.5)" stroke="black" stroke-width="2"></rect>
+        
+        <!-- Circle -->
+        <circle cx="400" cy="100" r="50" fill="green"></circle>
+        
+        <!-- Ellipse -->
+        <ellipse cx="650" cy="100" rx="100" ry="50" fill="blue"></ellipse>
+        
+        <!-- Line with Arrow -->
+        <line x1="50" y1="200" x2="250" y2="200" stroke="purple" stroke-width="4" marker-end="url(#arrow)"></line>
+        
+        <!-- Polyline -->
+        <polyline points="350,200 400,250 450,200" stroke="orange" stroke-width="3" fill="none"></polyline>
+        
+        <!-- Polygon -->
+        <polygon points="600,200 650,250 700,200" fill="teal"></polygon>
+        
+        <!-- Path (simple curve) -->
+        <path d="M50 300 C 150 200, 250 400, 350 300" stroke="black" fill="transparent" stroke-width="2"/>
+
+        <!-- Text -->
+        <text x="50" y="400" font-family="Arial" font-size="32" fill="black">Simple Text</text>
+        
+        <!-- Image (Data URI) -->
+        <image href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" x="500" y="350" height="100" width="100" />
+        
+        <!-- Foreign Object (Rich Text) -->
+        <foreignObject x="50" y="450" width="400" height="200">
+            <body xmlns="http://www.w3.org/1999/xhtml">
+                <div>
+                    <p>This is a <b>rich text</b> block with:</p>
+                    <ul>
+                        <li>First item</li>
+                        <li>Second item</li>
+                    </ul>
+                </div>
+            </body>
+        </foreignObject>
+    </svg>
+</body>
+</html>

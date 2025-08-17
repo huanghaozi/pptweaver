@@ -26,7 +26,7 @@ But this led to a new challenge: how do you get this perfect web-based content i
 
 This project is my answer. Instead of treating the AI like a slide designer, I treat it like a web developer. The workflow looks like this:
 
-![PPTWeaver Workflow Diagram](docs/architecture.svg)
+[View the PPTWeaver Workflow Diagram](docs/about_pptweaver_workflow.svg)
 
 1.  **HTML/SVG as the Source**: We start with a standard HTML file. Each `<body>` tag represents a new slide.
 2.  **Render with a Headless Browser**: PPTWeaver uses Playwright to render the HTML in the background, exactly as a browser would. This captures all CSS styling and layout information with perfect fidelity.
@@ -37,7 +37,7 @@ This project is my answer. Instead of treating the AI like a slide designer, I t
 
 Here's a more detailed look at how the components fit together:
 
-![PPTWeaver Software Architecture](docs/architecture.svg)
+[View the PPTWeaver Software Architecture Diagram](docs/architecture.svg)
 
 ### 🚀 Give It a Go!
 
